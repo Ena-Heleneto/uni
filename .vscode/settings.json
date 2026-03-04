@@ -60,5 +60,6 @@
     "**/manifest.json": "jsonc"
   },
   "files.autoSave": "afterDelay",
-  "editor.tabSize": 2
+  "editor.tabSize": 2,
+  "vite.autoStart": false
 }
