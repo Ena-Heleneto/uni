@@ -1,14 +1,15 @@
+<script setup lang="ts">
+const router = useRouter({})
+
+function handleClick() {
+  router.navigate({ url: '/pages/richText' })
+}
+</script>
+
 <template>
-  <view class="home-page">
-    <navigator url="/pages/font-richtext/index">
-      前往：富文本字体渲染测试页
-    </navigator>
+  <view size="full" p="4">
+    <wd-button type="success" @click="handleClick">
+      跳转
+    </wd-button>
   </view>
 </template>
-
-<style scoped lang="scss">
-.home-page {
-  padding: 32rpx;
-  font-size: 30rpx;
-}
-</style>

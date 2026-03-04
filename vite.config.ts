@@ -1,5 +1,7 @@
 import Uni from '@uni-helper/plugin-uni'
+import { uniuseAutoImports } from '@uni-helper/uni-use'
 import UniHelperComponents from '@uni-helper/vite-plugin-uni-components'
+import { WotResolver } from '@uni-helper/vite-plugin-uni-components/resolvers'
 import UniHelperLayouts from '@uni-helper/vite-plugin-uni-layouts'
 import UniHelperManifest from '@uni-helper/vite-plugin-uni-manifest'
 import UniHelperPages from '@uni-helper/vite-plugin-uni-pages'
@@ -14,22 +16,21 @@ export default defineConfig({
     // https://uni-helper.js.org/vite-plugin-uni-manifest
     UniHelperManifest(),
     // https://uni-helper.js.org/vite-plugin-uni-pages
-    UniHelperPages({
-      dts: 'src/uni-pages.d.ts',
-    }),
+    UniHelperPages({ dts: 'src/uni-pages.d.ts' }),
     // https://uni-helper.js.org/vite-plugin-uni-layouts
     UniHelperLayouts(),
     // https://uni-helper.js.org/vite-plugin-uni-components
     UniHelperComponents({
       dts: 'src/components.d.ts',
       directoryAsNamespace: true,
+      resolvers: [WotResolver()],
     }),
     // https://uni-helper.js.org/plugin-uni
     Uni(),
     UniPolyfill(),
     // https://github.com/antfu/unplugin-auto-import
     AutoImport({
-      imports: ['vue', '@vueuse/core', 'uni-app'],
+      imports: ['vue', 'uni-app', { '@uni-helper/uni-network': ['un'] }, uniuseAutoImports()],
       dts: 'src/auto-imports.d.ts',
       dirs: ['src/composables', 'src/stores', 'src/utils'],
       vueTemplate: true,
