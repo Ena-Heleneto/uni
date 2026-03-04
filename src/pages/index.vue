@@ -1,12 +1,3 @@
-<script setup lang="ts">
-definePage({
-  type: 'home',
-})
-</script>
-
 <template>
-  <AppLogos />
-  <InputEntry />
+  <view />
 </template>
-
-<style></style>

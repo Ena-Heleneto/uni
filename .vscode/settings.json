@@ -58,5 +58,7 @@
   "files.associations": {
     "**/pages.json": "jsonc",
     "**/manifest.json": "jsonc"
-  }
+  },
+  "files.autoSave": "afterDelay",
+  "editor.tabSize": 2
 }
