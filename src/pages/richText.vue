@@ -5,7 +5,7 @@ const { log } = useLogger({ tag: 'RichTextHeader' })
 const RichTextHeaderValue = ref<string>('')
 
 watchEffect(async () => {
-  const res = await post('/api/rich-text', { value: RichTextHeaderValue.value })
+  const res = await post('/v1/rich-text/test', { value: RichTextHeaderValue.value })
   log('RichTextHeader response:', res)
 })
 </script>

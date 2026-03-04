@@ -18,7 +18,7 @@ export function useFetch() {
   }
 
   const instance = un.create({
-    baseUrl: 'https://185.106.176.15:3000',
+    baseUrl: 'http://185.106.176.15:3000',
     timeout: 1000,
     headers: { 'X-Custom-Header': 'foobar' },
   })
