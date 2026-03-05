@@ -7,136 +7,42 @@ function handleClick() {
 </script>
 
 <template>
-  <view class="home">
-    <view class="hero">
-      <text class="eyebrow">
+  <view class="p-5 bg-[radial-gradient(120%_80%_at_10%_10%,#fff1e7_0%,rgba(255,241,231,0)_55%),radial-gradient(90%_80%_at_90%_15%,#e6f0ff_0%,rgba(230,240,255,0)_55%),linear-gradient(180deg,#f9fafb_0%,#f1f5f9_100%)] flex flex-col gap-5 min-h-full">
+    <view class="p-5 rounded-5 bg-white flex flex-col gap-3 shadow-[0_18px_40px_rgba(15,23,42,0.08)]">
+      <text class="text-3 text-[#64748b] tracking-[0.12em] uppercase">
         Rich Text Lab
       </text>
-      <text class="headline">
+      <text class="text-[26px] text-[#0f172a] font-700 font-serif">
         字体实验入口
       </text>
-      <text class="subhead">
+      <text class="text-3.5 text-[#475569] leading-relaxed">
         这里集中测试富文本字体渲染、加载方式与小程序兼容性。
       </text>
-      <view class="actions">
-        <button class="primary" @click="handleClick">
+      <view class="mt-1.5 flex flex-col gap-2.5">
+        <button class="text-3.75 text-white font-600 px-4.5 py-3 text-center border-0 rounded-full from-[#0f172a] to-[#334155] bg-gradient-to-br" @click="handleClick">
           进入实验室
         </button>
-        <text class="note">
+        <text class="text-3 text-[#64748b]">
           建议在小程序端查看字体表现
         </text>
       </view>
     </view>
 
-    <view class="panel">
-      <view class="panel-card">
-        <text class="panel-title">
+    <view class="flex flex-col gap-3">
+      <view class="p-4 border border-[#e2e8f0]/90 rounded-4 bg-white/90 shadow-[0_10px_24px_rgba(15,23,42,0.06)]">
+        <text class="text-3.5 text-[#0f172a] font-600 mb-2">
           你可以做什么
         </text>
-        <text class="panel-item">
+        <text class="text-3.25 text-[#475569] leading-relaxed">
           - 对比远端字体声明与本地加载效果
         </text>
-        <text class="panel-item">
+        <text class="text-3.25 text-[#475569] leading-relaxed">
           - 验证 rich-text 解析与样式覆盖
         </text>
-        <text class="panel-item">
+        <text class="text-3.25 text-[#475569] leading-relaxed">
           - 评估 base64 字体的可行性
         </text>
       </view>
     </view>
   </view>
 </template>
-
-<style scoped lang="scss">
-.home {
-  min-height: 100%;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  background:
-    radial-gradient(120% 80% at 10% 10%, #fff1e7 0%, rgba(255, 241, 231, 0) 55%),
-    radial-gradient(90% 80% at 90% 15%, #e6f0ff 0%, rgba(230, 240, 255, 0) 55%),
-    linear-gradient(180deg, #f9fafb 0%, #f1f5f9 100%);
-}
-
-.hero {
-  padding: 20px;
-  border-radius: 20px;
-  background: #ffffff;
-  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.eyebrow {
-  font-size: 12px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: #64748b;
-}
-
-.headline {
-  font-size: 26px;
-  font-weight: 700;
-  color: #0f172a;
-  font-family: "Georgia", "Times New Roman", serif;
-}
-
-.subhead {
-  font-size: 14px;
-  line-height: 1.7;
-  color: #475569;
-}
-
-.actions {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-top: 6px;
-}
-
-.primary {
-  background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
-  color: #ffffff;
-  border-radius: 999px;
-  padding: 12px 18px;
-  font-size: 15px;
-  font-weight: 600;
-  text-align: center;
-  border: none;
-}
-
-.note {
-  font-size: 12px;
-  color: #64748b;
-}
-
-.panel {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.panel-card {
-  padding: 16px;
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.9);
-  border: 1px solid rgba(226, 232, 240, 0.9);
-  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
-}
-
-.panel-title {
-  font-size: 14px;
-  font-weight: 600;
-  color: #0f172a;
-  margin-bottom: 8px;
-}
-
-.panel-item {
-  font-size: 13px;
-  color: #475569;
-  line-height: 1.6;
-}
-</style>
