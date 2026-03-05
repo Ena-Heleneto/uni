@@ -39,4 +39,6 @@ export default defineConfig({
     // see unocss.config.ts for config
     UnoCSS(),
   ],
+
+  server: { host: true },
 })

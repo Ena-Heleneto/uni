@@ -7,6 +7,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "unh dev",
+    "dev:h5": "unh dev h5",
     "build": "unh build",
     "about": "unh info",
     "type-check": "vue-tsc --noEmit",
@@ -68,7 +69,7 @@
     "sass": "^1.78.0",
     "simple-git-hooks": "^2.13.0",
     "typescript": "~5.8.3",
-    "unocss": "66.0.0",
+    "unocss": "66.6.5",
     "unplugin-auto-import": "^21.0.0",
     "vite": "^5.2.8",
     "vite-plugin-uni-polyfill": "^0.1.0",

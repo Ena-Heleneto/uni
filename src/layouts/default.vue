@@ -2,6 +2,10 @@
 function handleBackHome() {
 
 }
+
+function handleBack() {
+
+}
 </script>
 
 <template>

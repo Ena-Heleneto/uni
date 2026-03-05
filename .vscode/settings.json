@@ -61,5 +61,6 @@
   },
   "files.autoSave": "afterDelay",
   "editor.tabSize": 2,
-  "vite.autoStart": false
+  "vite.autoStart": false,
+  "workbench.browser.enableChatTools": true
 }
