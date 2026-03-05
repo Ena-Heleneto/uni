@@ -27,3 +27,4 @@ manifest.json
 auto-imports.d.ts
 components.d.ts
 uni-pages.d.ts
+public/assets/fonts
