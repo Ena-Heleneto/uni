@@ -53,9 +53,10 @@ export default defineManifestConfig({
   /* 小程序特有相关 */
   'mp-weixin': {
     appid: 'wx7639b3ea5b679480',
-    setting: {
-      urlCheck: false,
-    },
+    es6: false,
+    es7: true,
+    enhance: true,
+    setting: { urlCheck: true },
     usingComponents: true,
     darkmode: true,
     themeLocation: 'theme.json',

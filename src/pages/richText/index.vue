@@ -4,32 +4,32 @@ const routes = [
   { label: '旧版实验页', url: '/pages/richText/old' },
 ]
 
+const router = useRouter({})
+
 function go(url: string) {
-  uni.navigateTo({ url })
+  router.navigate({ url })
 }
 </script>
 
 <template>
-  <view class="hub" min="h-full" p="5" flex="~ col" gap="5" bg="linear-65" from="white/90">
-    <view class="header">
-      <text class="eyebrow">
+  <view
+    min="h-full" p="5" flex="~ col" gap="5" bg="linear-65 radial-135" from="#fff5ebe6 #0f172a0a"
+    to="#f0f5ffe6 #0f172a0a" mask=""
+  >
+    <view p="4" rounded="4" bg="#ffffff" shadow="xl #0f172a1a" flex="~ col" gap="3">
+      <text text="3 #64748b" tracking="widest" uppercase="~" font="sans">
         Rich Text Lab
       </text>
-      <text class="title">
+      <text text="6 #0f172a" font="bold">
         字体实验入口
       </text>
-      <text class="subtitle">
+      <text text="4 #475569" font="sans">
         选择一个场景，开始验证小程序端的字体效果。
       </text>
     </view>
 
     <view class="list">
-      <view
-        v-for="item in routes"
-        :key="item.url"
-        class="card"
-        @click="go(item.url)"
-      >
+      <view v-for="item in routes" :key="item.url" class="card" @click="go(item.url)">
         <view class="card-body">
           <text class="card-title">
             {{ item.label }}
@@ -47,41 +47,6 @@ function go(url: string) {
 </template>
 
 <style scoped lang="scss">
-.hub {
-  min-height: 100%;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  background:
-    linear-gradient(180deg, rgba(255, 245, 235, 0.9) 0%, rgba(240, 245, 255, 0.9) 100%),
-    repeating-linear-gradient(135deg, rgba(15, 23, 42, 0.04) 0px, rgba(15, 23, 42, 0.04) 1px, transparent 1px, transparent 10px);
-}
-
-.header {
-  padding: 18px;
-  border-radius: 18px;
-  background: #ffffff;
-  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.1);
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.eyebrow {
-  font-size: 11px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: #64748b;
-}
-
-.title {
-  font-size: 24px;
-  font-weight: 700;
-  color: #0f172a;
-  font-family: "Georgia", "Times New Roman", serif;
-}
-
 .subtitle {
   font-size: 13px;
   line-height: 1.7;

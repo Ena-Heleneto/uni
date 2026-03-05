@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.0.0",
   "private": true,
-  "packageManager": "pnpm@9.15.4",
+  "packageManager": "pnpm@10.30.3",
   "license": "MIT",
   "scripts": {
     "dev": "unh dev",
@@ -16,22 +16,22 @@
     "postinstall": "npx simple-git-hooks"
   },
   "dependencies": {
-    "@dcloudio/uni-app": "3.0.0-4080720251210001",
-    "@dcloudio/uni-app-harmony": "3.0.0-4080720251210001",
-    "@dcloudio/uni-app-plus": "3.0.0-4080720251210001",
-    "@dcloudio/uni-components": "3.0.0-4080720251210001",
-    "@dcloudio/uni-h5": "3.0.0-4080720251210001",
-    "@dcloudio/uni-mp-alipay": "3.0.0-4080720251210001",
-    "@dcloudio/uni-mp-baidu": "3.0.0-4080720251210001",
-    "@dcloudio/uni-mp-harmony": "3.0.0-4080720251210001",
-    "@dcloudio/uni-mp-jd": "3.0.0-4080720251210001",
-    "@dcloudio/uni-mp-kuaishou": "3.0.0-4080720251210001",
-    "@dcloudio/uni-mp-lark": "3.0.0-4080720251210001",
-    "@dcloudio/uni-mp-qq": "3.0.0-4080720251210001",
-    "@dcloudio/uni-mp-toutiao": "3.0.0-4080720251210001",
-    "@dcloudio/uni-mp-weixin": "3.0.0-4080720251210001",
-    "@dcloudio/uni-mp-xhs": "3.0.0-4080720251210001",
-    "@dcloudio/uni-quickapp-webview": "3.0.0-4080720251210001",
+    "@dcloudio/uni-app": "3.0.0-4070520250711001",
+    "@dcloudio/uni-app-harmony": "3.0.0-4070520250711001",
+    "@dcloudio/uni-app-plus": "3.0.0-4070520250711001",
+    "@dcloudio/uni-components": "3.0.0-4070520250711001",
+    "@dcloudio/uni-h5": "3.0.0-4070520250711001",
+    "@dcloudio/uni-mp-alipay": "3.0.0-4070520250711001",
+    "@dcloudio/uni-mp-baidu": "3.0.0-4070520250711001",
+    "@dcloudio/uni-mp-harmony": "3.0.0-4070520250711001",
+    "@dcloudio/uni-mp-jd": "3.0.0-4070520250711001",
+    "@dcloudio/uni-mp-kuaishou": "3.0.0-4070520250711001",
+    "@dcloudio/uni-mp-lark": "3.0.0-4070520250711001",
+    "@dcloudio/uni-mp-qq": "3.0.0-4070520250711001",
+    "@dcloudio/uni-mp-toutiao": "3.0.0-4070520250711001",
+    "@dcloudio/uni-mp-weixin": "3.0.0-4070520250711001",
+    "@dcloudio/uni-mp-xhs": "3.0.0-4070520250711001",
+    "@dcloudio/uni-quickapp-webview": "3.0.0-4070520250711001",
     "@uni-helper/uni-network": "^0.23.1",
     "@vueuse/core": "^13.5.0",
     "vue": "3.4.21",
@@ -79,7 +79,15 @@
   "pnpm": {
     "overrides": {
       "unconfig": "7.3.2"
-    }
+    },
+    "onlyBuiltDependencies": [
+      "@uni-helper/unocss-preset-uni",
+      "core-js",
+      "esbuild",
+      "simple-git-hooks",
+      "unrs-resolver",
+      "vue-demi"
+    ]
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"
