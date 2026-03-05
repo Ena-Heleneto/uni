@@ -1,4 +1,5 @@
 import Uni from '@uni-helper/plugin-uni'
+import { uniuseAutoImports } from '@uni-helper/uni-use'
 import UniHelperComponents from '@uni-helper/vite-plugin-uni-components'
 import UniHelperLayouts from '@uni-helper/vite-plugin-uni-layouts'
 import UniHelperManifest from '@uni-helper/vite-plugin-uni-manifest'
@@ -23,19 +24,24 @@ export default defineConfig({
     UniHelperComponents({
       dts: 'src/components.d.ts',
       directoryAsNamespace: true,
+      // resolvers: [WotResolver()],
+      resolvers: [],
     }),
     // https://uni-helper.js.org/plugin-uni
     Uni(),
     UniPolyfill(),
     // https://github.com/antfu/unplugin-auto-import
     AutoImport({
-      imports: ['vue', '@vueuse/core', 'uni-app'],
+      imports: ['vue', 'uni-app', { '@uni-helper/uni-network': ['un'] }, uniuseAutoImports()],
       dts: 'src/auto-imports.d.ts',
       dirs: ['src/composables', 'src/stores', 'src/utils'],
       vueTemplate: true,
     }),
+
     // https://github.com/antfu/unocss
     // see unocss.config.ts for config
     UnoCSS(),
   ],
+
+  server: { host: true },
 })

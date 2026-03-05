@@ -1,26 +1,22 @@
 import { presetUni } from '@uni-helper/unocss-preset-uni'
-import {
-  defineConfig,
-  presetIcons,
-  transformerDirectives,
-  transformerVariantGroup,
-} from 'unocss'
+import { createLocalFontProcessor } from '@unocss/preset-web-fonts/local'
+import { defineConfig, presetAttributify, presetIcons, presetTagify, presetWebFonts, presetWind4, transformerDirectives, transformerVariantGroup } from 'unocss'
 
 export default defineConfig({
   presets: [
     presetUni(),
-    presetIcons({
-      scale: 1.2,
-      warn: true,
-      extraProperties: {
-        'display': 'inline-block',
-        'vertical-align': 'middle',
+    presetWind4,
+    presetAttributify,
+    presetIcons({ scale: 1.2, warn: true, extraProperties: { 'display': 'inline-block', 'vertical-align': 'middle' } }),
+    presetWebFonts({
+      fonts: {
+        sans: { name: 'DM Sans', weights: ['400', '700'], italic: false },
+        serif: 'DM Serif Display',
+        mono: 'DM Mono',
       },
-      // HBuilderX 必须针对要使用的 Collections 做异步导入
-      // collections: {
-      //   carbon: () => import('@iconify-json/carbon/icons.json').then(i => i.default),
-      // },
+      processors: createLocalFontProcessor(),
     }),
+    presetTagify(),
   ],
   transformers: [transformerDirectives(), transformerVariantGroup()],
 })

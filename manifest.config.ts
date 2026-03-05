@@ -54,7 +54,10 @@ export default defineManifestConfig({
   'mp-weixin': {
     appid: '',
     setting: {
+      es6: true,
+      enhance: true,
       urlCheck: false,
+      disableUseStrict: true,
     },
     usingComponents: true,
     darkmode: true,
