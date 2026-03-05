@@ -23,9 +23,9 @@ function handleClick() {
       <text text="3 #475569">
         这里集中测试富文本字体渲染、加载方式与小程序兼容性。
       </text>
-      <view flex="~ col" gap="3" m="b-2">
+      <view flex="~ col" gap="4" m="b-2">
         <button
-          bg="linear-135" from="#0f172a" to="#334155" text="#ffffff 4 center" rounded="full" p="y-4 x-5"
+          bg="linear-[135deg]" from="#0f172a" to="#334155" text="#ffffff 4 center" rounded="full" p="y-1 x-7"
           font="semibold" border="none" @click="handleClick"
         >
           进入实验室
@@ -36,44 +36,19 @@ function handleClick() {
       </view>
     </view>
 
-    <view flex="~ col" gap="4">
-      <view class="panel-card" p="4" rounded="4" bg="#ffffffe6" border="1px solid">
-        <text class="panel-title">
-          你可以做什么
-        </text>
-        <text class="panel-item">
-          - 对比远端字体声明与本地加载效果
-        </text>
-        <text class="panel-item">
-          - 验证 rich-text 解析与样式覆盖
-        </text>
-        <text class="panel-item">
-          - 评估 base64 字体的可行性
-        </text>
-      </view>
+    <view flex="~ col" gap="1" p="4" rounded="4" bg="#ffffffe6" border="1px solid #e2e8f0e6" shadow="lg #0f172a0f">
+      <text text="3 #0f172a" font="semibold" m="b-2">
+        你可以做什么
+      </text>
+      <text text="4 #475569">
+        - 对比远端字体声明与本地加载效果
+      </text>
+      <text text="4 #475569">
+        - 验证 rich-text 解析与样式覆盖
+      </text>
+      <text text="4 #475569">
+        - 评估 base64 字体的可行性
+      </text>
     </view>
   </view>
 </template>
-
-<style scoped lang="scss">
-.panel-card {
-  padding: 16px;
-  border-radius: 16px;
-  background: #ffffffe6;
-  border: 1px solid rgba(226, 232, 240, 0.9);
-  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
-}
-
-.panel-title {
-  font-size: 14px;
-  font-weight: 600;
-  color: #0f172a;
-  margin-bottom: 8px;
-}
-
-.panel-item {
-  font-size: 13px;
-  color: #475569;
-  line-height: 1.6;
-}
-</style>
