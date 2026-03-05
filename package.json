@@ -3,10 +3,11 @@
   "type": "module",
   "version": "0.0.0",
   "private": true,
-  "packageManager": "pnpm@9.15.4",
+  "packageManager": "pnpm@10.30.3",
   "license": "MIT",
   "scripts": {
     "dev": "unh dev",
+    "dev:h5": "unh dev h5",
     "build": "unh build",
     "about": "unh info",
     "type-check": "vue-tsc --noEmit",
@@ -73,7 +74,14 @@
   "pnpm": {
     "overrides": {
       "unconfig": "7.3.2"
-    }
+    },
+    "onlyBuiltDependencies": [
+      "@uni-helper/unocss-preset-uni",
+      "core-js",
+      "esbuild",
+      "simple-git-hooks",
+      "unrs-resolver"
+    ]
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"
